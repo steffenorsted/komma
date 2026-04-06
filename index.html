@@ -10,13 +10,18 @@
             padding: 0;
             height: 100vh;
             width: 100vw;
+            overflow: hidden;
+            user-select: none;
+            box-sizing: border-box;
+        }
+        .border-wrapper {
+            height: 100%;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: white;
-            user-select: none;
-            box-sizing: border-box;
             border: 10px solid black;
+            box-sizing: border-box;
         }
         .komma-image {
             min-width: 300px;
@@ -28,6 +33,9 @@
     </style>
 </head>
 <body>
-    <img class="komma-image" src="komma-logo.svg" alt="Komma" loading="lazy" />
+    <div class="border-wrapper">
+        <img class="komma-image" src="komma-logo.svg" alt="Komma" loading="lazy" />
+        <p>Hellooo</p>
+    </div>
 </body>
 </html>
