@@ -1,63 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-    <title>Komma</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            user-select: none;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Red Box</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
 
-        .border-wrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: white;
-            padding: 10px;
-            box-sizing: border-box;
-        }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      padding: 16px;
+      box-sizing: border-box;
+    }
 
-        .border-wrapper::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-            padding: 10px;
-            background: linear-gradient(to bottom, #ffc0f8, #B19CD9);
-            -webkit-mask:
-                linear-gradient(#fff 0 0) content-box,
-                linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-        }
-
-        .komma-image {
-            min-width: 300px;
-            min-height: 300px;
-            width: 50vmin;
-            height: auto;
-            image-rendering: crisp-edges;
-        }
-    </style>
+    .logo {
+      width: min(260px, 80vw);
+      aspect-ratio: 1 / 2;
+      object-fit: contain;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <div class="border-wrapper">
-        <img class="komma-image" src="komma-logo.svg" alt="Komma" loading="lazy" />
-        <p>Hellooo</p>
-    </div>
+  <img class="logo" src="komma-logo.svg" alt="Komma logo">
 </body>
 </html>
